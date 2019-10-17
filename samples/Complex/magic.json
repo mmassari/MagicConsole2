@@ -1,0 +1,75 @@
+{
+  "type": "smart",
+  "settings": {
+    "foregroundColor": "green",
+    "headerTemplate": "{title:upper} - Version:{assemblyVersion}\n{description}\n{copyright}\n",
+    "mode": "smart",
+    "autoclose": true,
+    "header": "Program Menu:",
+    "border": true,
+    "help": true
+  },
+  "commands": [
+    {
+      "name": "Import",
+      "title": "Importazione Dati",
+      "description": "Desc",
+      "alias": [ "/import", "/i" ],
+      "default": true,
+      "options": [ "FlagOption" ]
+    },
+    {
+      "name": "Export",
+      "title": "Esportazione dati",
+      "description": "Desc",
+      "alias": [ "/export", "/e" ],
+      "options": [ "DateOption", "IntegerOption" ]
+    },
+    {
+      "name": "Transfer",
+      "title": "Trasferimento dati",
+      "description": "Desc",
+      "menu_id": 5,
+      "alias": [ "/collect", "/c" ],
+      "options": [ "FlagOption", "DateOption", "IntegerOption", "EnumOption" ]
+    }
+  ],
+  "options": [
+    {
+      "name": "FlagOption",
+      "title": "Please input a flag option",
+      "description": "A flag option for test this input type",
+      "priority": 2,
+      "type": "Flag",
+      "default": false,
+      "alias": [ "-flag", "-f" ]
+    },
+    {
+      "name": "DateOption",
+      "title": "Please insert a date",
+      "description": "A date option for test this input type",
+      "priority": 3,
+      "type": "Date",
+      "alias": [ "-date", "-d" ]
+    },
+    {
+      "name": "IntegerOption",
+      "title": "Please insert a integer",
+      "description": "A integer option for test this input type",
+      "priority": 4,
+      "type": "Integer",
+      "default": 3,
+      "alias": [ "-integer","-int", "-i" ]
+    },
+    {
+      "name": "EnumOption",
+      "title": "Please select a fruit",
+      "description": "A enum option for test this input type",
+      "priority": 5,
+      "type": "Enum",
+      "default": "Coconut",
+      "alias": [ "-enum", "-e" ]
+    }
+
+  ]
+}
