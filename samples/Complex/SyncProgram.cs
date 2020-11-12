@@ -21,7 +21,6 @@ namespace ComplexApp
 				case SyncCommands.Export:
 				case SyncCommands.Transfer:
 					Console.WriteLine($"Inizio procedura {command.ToString()}");
-
 					Console.WriteLine($"Opzioni selezionate:");
 					foreach (KeyValuePair<SyncOptions, object> opt in options)
 						Console.WriteLine($"{opt.Key.ToString()}:{opt.Value.ToString()}");

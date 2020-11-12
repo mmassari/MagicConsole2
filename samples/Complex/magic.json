@@ -16,7 +16,7 @@
       "description": "Desc",
       "alias": [ "/import", "/i" ],
       "default": true,
-      "options": [ "FlagOption" ]
+      "options": [ "EnumOption" ]
     },
     {
       "name": "Export",
